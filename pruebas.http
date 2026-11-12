@@ -1,0 +1,21 @@
+
+# Dirección de nuestra API
+@baseUrl = http://localhost:8080
+
+### 1. Consultar la documentación OpenAPI
+# Comprueba que Spring Boot genera la documentación.
+GET {{baseUrl}}/v3/api-docs
+Accept: application/json
+
+### 2. Comprobar una ruta inexistente
+# Permite observar cómo responde la API ante una ruta no registrada.
+GET {{baseUrl}}/ruta-que-no-existe
+Accept: application/json
+
+### 3. Abrir la interfaz de Swagger
+# Comprueba que la interfaz de documentación está disponible.
+GET {{baseUrl}}/swagger-ui/index.html
+
+### 4. Consultar la consola H2
+# Comprueba que la consola está habilitada en el perfil correspondiente.
+GET {{baseUrl}}/h2-console
